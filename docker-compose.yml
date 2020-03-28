@@ -5,8 +5,8 @@ services:
     build:
       context: .
     ports:
-      - "8000:8000"
+      - "8000:8000"  # map the app port in localhost - image
     volumes:
-      - ./app:/app
+      - ./app:/app  # map the app folder in localhost - image
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
